@@ -22,30 +22,18 @@ RTL8152B         | USB 2.0     | 10/100M
 
 ## Installation
 
-Installation using the Debian package is recommended for the sake of getting the newer driver.
+There are 2 ways (autorun.sh or dkms-install.sh)to install this DKMS module. Choose one as your tastes. 
 
-### Debian package
+### clone code 
 
-#### Released package file
-
-Download the latest Debian package from the Release tab on the Github repository.
-
-Then enter the following command.
-
-```bash
-sudo dpkg -i realtek-r8152-dkms-2.19.2-1*.deb
 ```
+git clone https://github.com/wisdpi/wp-ut5_dkms.git
 
-> If multiple files selected by the wild card, you should type the specific version of the file.
->
-> ```bash
-> sudo dpkg -i realtek-r8152-dkms*.deb
-> ```
+```
+> If you use **Raspberry Pi OS**, please checkout the raspios branch
+```
+git clone -b raspios https://github.com/wisdpi/wp-ut5_dkms.git
 
-If dependency error occurs, try to fix that with `apt` command.
-
-```bash
-sudo apt install --fix-broken
 ```
 
 ### autorun.sh
