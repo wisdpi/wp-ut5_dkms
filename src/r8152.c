@@ -26076,7 +26076,7 @@ u8 rtl8152_get_version(struct usb_interface *intf)
 
 	return version;
 }
-EXPORT_SYMBOL_GPL(rtl8152_get_version);
+//EXPORT_SYMBOL_GPL(rtl8152_get_version);
 
 #ifdef RTL8152_DEBUG
 
