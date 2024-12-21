@@ -21,7 +21,7 @@ RESULT=$?
 echo "Finished running dkms install steps."
 
 echo "Copy the dedicated udev rules file..."
-cp udev/rules.d/50-usb-realtek-net.rules /etc/udev/rules.d/
+cp udev/rules.d/50-wput5.rules /etc/udev/rules.d/
 
 echo "Restarting udev..."
 udevadm control --reload-rules

@@ -2,15 +2,15 @@
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/awesometic/realtek-r8152-dkms?sort=semver&style=for-the-badge)
 
-This provides Realtek r8152 driver in DKMS way so that you can keep the latest driver even after the kernel upgrade.
+This driver forked from [awesometic/realtek-r8152-dkms](https://github.com/awesometic/realtek-r8152-dkms)
+
+This provides WP-UT5 driver in DKMS way so that you can keep the latest driver even after the kernel upgrade.
 
 ## Compatibility
 
-The r8152 driver supports the following USB Ethernet chipsets.
+This driver supports [WisdPi USB 3.2 to 5GbE adapter (WP-UT5)](https://www.wisdpi.com/products/wisdpi-usb-3-2-5g-ethernet-adapter-wp-ut5-wired-lan-network-connection-for-mac-os-linux-windows-backward-compatible-on-5g-2-5g-1g-100mbps-ideal-for-gaming) and some other USB Ethernet chipsets.
 
 > Refers to the official websites, you can check it at the bottom of this document
->
-> *For RTL8157 (5 GbE), you need 2.18.1 or above*
 
 Chipset          | Interface   | Performance
 :----------------|:-----------:|:----------------:
@@ -21,10 +21,6 @@ RTL8154 /B       | USB 2.0     | 10/100/1000 MbE
 RTL8152B         | USB 2.0     | 10/100M
 
 ## Installation
-
-There are 3 ways to install this DKMS module. Choose one as your tastes.
-
-Those are not interfering with each other. So you can do all 3 methods but absolutely you don't need to.
 
 Installation using the Debian package is recommended for the sake of getting the newer driver.
 
@@ -50,20 +46,6 @@ If dependency error occurs, try to fix that with `apt` command.
 
 ```bash
 sudo apt install --fix-broken
-```
-
-#### Launchpad PPA (Recommended)
-
-Add the Launchpad PPA.
-
-```bash
-sudo add-apt-repository ppa:awesometic/ppa
-```
-
-Then install the package using `apt` tool.
-
-```bash
-sudo apt install realtek-r8152-dkms
 ```
 
 ### autorun.sh
